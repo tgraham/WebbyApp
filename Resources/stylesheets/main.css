@@ -1,0 +1,138 @@
+html, body { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, pre, a, abbr, acronym, address, code, del, dfn, em, img, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr { margin: 0; padding: 0; border: 0; font-weight: inherit; font-style: inherit; font-size: 100%; font-family: inherit; vertical-align: baseline; }
+
+a img { 
+  border: none; 
+}
+
+.left { 
+  float: left;
+}
+
+.right {
+  text-align: right;
+}
+
+.titles { 
+  margin-right: 20px;
+}
+
+.center { 
+  text-align: center;
+}
+
+.big { 
+  font-size: 1.2em;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.hint {
+  font-size: 0.8em;
+}
+
+.hidden { 
+  display: none;
+}
+
+#main { 
+  font-family: "Lucida Grande", Helvetica; 
+  background: #2e434b none repeat scroll 0 0; 
+  margin: 0;
+}
+
+#main #container { 
+  clear: both; 
+  padding: 30px;
+}
+
+#main #contents { 
+  min-width: 700px; 
+  min-height: 150px; 
+  border: 2px solid #c5c5c5; 
+  background-color: #e5e5e5; 
+  margin: 0px auto; 
+  padding: 15px;
+}
+
+#main #footer {
+  height: 100px;
+  padding: 10px;
+  background-image: url(/images/logo_main.png); 
+  background-repeat: no-repeat; 
+  background-position: 50%;
+}
+
+.table { 
+  display: table;
+  }
+  
+.row, .profilesrow { 
+  display: table-row;
+}
+
+.cell { 
+  display: table-cell; 
+  text-align: center; 
+  min-width: 75px; 
+  padding-left: 15px; 
+  padding-right: 15px;
+  padding-top: 10px;
+  font-size: 0.80em;
+}
+
+.headers { 
+  text-decoration: underline; 
+  font-weight: bold; 
+  display: table-cell; 
+  text-align: center; 
+  min-width: 75px; 
+  padding-left: 15px; 
+  padding-right: 15px;
+}
+
+.webbiesrow img { 
+  padding-left: 5px; 
+  padding-right: 5px;
+}
+
+.profilesrow img {
+  width: 1.5em;
+}
+
+.active { 
+  color: #009900;
+}
+
+.off {
+  color: #686868;
+}
+
+.rebooting {
+  color: #FFCC00;
+}
+
+.unknown, .inactive {
+  color: #E00000;
+}
+
+#addone, #show_records, #new_zone, #new_record {
+  display: none;
+}
+
+#clientname {
+  text-decoration: underline;
+}
+
+.button {
+  background-image: url(/images/form-button-bg.gif);
+  background-repeat: repeat-x;
+  border: 1px solid #cacaca;
+  font-size: 0.8em;
+  padding: 5px;
+  color: #2b2b2b;
+  text-align: center;
+}

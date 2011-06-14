@@ -1,0 +1,252 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="stylesheets/jquery-ui.css" type="text/css" charset="utf-8"/>
+    <link rel="stylesheet" href="stylesheets/jquery.alerts.css" type="text/css" charset="utf-8"/>
+		<script type="text/javascript" src="javascripts/jquery.js"></script>
+		<script type="text/javascript" src="javascripts/jquery-ui.js"></script>
+		<script type="text/javascript" src="javascripts/jquery.alerts.js"></script>
+    <script type="text/javascript" src="javascripts/main.js"></script>
+  </head>
+  <!-- <body id='main' oncontextmenu="return false;"> -->
+  <body id='main'>
+    <div id='container'>
+      <div id='contents'>
+        <div id="tabs">
+    			<ul>
+    				<li><a href="#tabs-1">Webbies</a></li>
+    				<li><a href="#tabs-2">DNS</a></li>
+    				<li><a href="#tabs-3">Client Profile</a></li>
+    				<li><a href="#tabs-4">Local Profiles</a></li>
+    				<li><a href="#tabs-5">Settings</a></li>
+    			</ul>
+    			
+    			<div id="tabs-1">
+    			  <div class="table">
+    			    <div class="webbiesrow">
+    			    </div>
+    			    <hr />
+      			  <div class="row">
+			          <div class="cell">
+  			          <input class="refresh" type="submit" value="Refresh">
+  			        </div>
+  			      </div>
+    			  </div>
+    			</div>
+    			
+    			<div id="tabs-2">
+    			  <div id="zones" class="table">
+    			    <div class="zonesrow">
+      			  </div>
+      			  <hr />
+      			  <div class="row">
+			          <div class="cell">
+  			          <input class="add_zone" type="submit" value="Add Zone">
+  			        </div>
+  			      </div>
+    			  </div>
+    			  <div id="new_zone" class="table">
+    			    <div>
+    			      <input id="zone_id" size="8" type="hidden" />
+    			      <input id="zone_email" size="25" type="hidden" />
+    			      <input id="zone_token" size="40" type="hidden" />
+    			    </div>
+    			    <div class="zone_owner">
+    			    </div>
+    			    <br />
+    			    <div>
+                <label for="domain">Domain Name</label>
+                <br />
+                <input id="domain" size="40" type="text" value="" />
+              </div>
+              <br />
+              <div>
+                <label for="ttl">TTL</label>
+                <br />
+                <input id="ttl" size="6" type="text" value="86400" />
+              </div>
+              <br />
+              <div>
+                <label for="status">Status</label>
+                <br />
+                <div id="radio">
+                  <input name="status" type="radio" id="radio1" value="Active" checked="checked" /> <label for="radio1">Active</label>
+                  <input name="status" type="radio" id="radio2" value="Inactive" /> <label for="radio2">Inactive</label>
+                </div>
+              </div>
+              <br />
+              <div class="row">
+			          <div class="cell">
+                  <input class="new_zone" type="submit" value="Submit" />
+                  <input class="cancel_zone" type="submit" value="Cancel" />
+                </div>
+              </div>
+    			  </div>
+    			  <div id="show_records">
+    			    <div class="table">
+    			      <div class="recordsrow">
+    			        <div class="row">
+  			            <div class="headers">Name</div>
+  			            <div class="headers">Data</div>
+    			          <div class="headers">Type</div>
+    			          <div class="headers">Aux</div>
+    			          <div class="headers">ttl</div>
+    			        </div>
+    			      </div>
+    			      <hr />
+    			      <div class="row">
+  			          <div class="cell">
+    			          <input class="add_gmail" type="submit" value="Add Gmail Records">
+    			          <input class="add_record" type="submit" value="Add Record">
+    			          <input class="cancel_records" type="submit" value="Cancel">
+    			        </div>
+    			      </div>
+    			    </div>
+    			  </div>
+    			  <div id="new_record" class="table">
+    			    <div>
+    			      <input id="record_zone_id" size="8" type="hidden" />
+    			      <input id="record_id" size="8" type="hidden" />
+    			      <input id="record_email" size="25" type="hidden" />
+    			      <input id="record_token" size="40" type="hidden" />
+    			    </div>
+    			    <div>
+                <label for="type">Type</label>
+                <br />
+                <select id="type" name="type">
+                  <option value="A">A</option>
+                  <option value="AAAA">AAAA</option>
+                  <option value="CNAME">CNAME</option>
+                  <option value="HINFO">HINFO</option>
+                  <option value="MX">MX</option>
+                  <option value="NS">NS</option>
+                  <option value="PTR">PTR</option>
+                  <option value="RP">RP</option>
+                  <option value="SRV">SRV</option>
+                  <option value="TXT">TXT</option>
+                </select>
+              </div>
+              <br />
+              <div>
+                <label for="name">Name</label>
+                <br />
+                <input id="name" size="20" type="text" value="" />
+              </div>
+              <br />
+              <div>
+                <label for="data">Data</label>
+                <br />
+                <input id="data" size="20" type="text" value="" />
+              </div>
+              <br />
+              <div>
+                <label for="aux">Auxillary Data</label>
+                <br />
+                <input id="aux" size="40" length="255" type="text" value="0" />
+              </div>
+              <br />
+              <div>
+                <label for="record_ttl">TTL</label>
+                <br />
+                <input id="record_ttl" size="8" type="text" value="86400" />
+              </div>
+              <br />
+              <div class="row">
+			          <div class="cell">
+                  <input class="new_record" type="submit" value="Submit" />
+                  <input class="cancel_record" type="submit" value="Cancel" />
+                </div>
+              </div>
+    			  </div>
+    			</div>
+    			
+    			<div id="tabs-3">
+    			  <div id="clientname"></div>
+    			  <br />
+    			  <div><b>Created: </b></div>
+    			    <div id="created"></div>
+    			  <br />
+    			  <div><b>Address: </b></div>
+    			    <div id="company"></div>
+    			    <div id="address"></div>
+    			    <div id="address2"></div>
+    			  <br />
+    			  <div><b>Phone Number: </b></div>
+    			    <div id="phone"></div>
+    			  <br />
+    			  <div><b>Account Credit: </b></div>
+    			    <div id="credit"></div>
+    			</div>
+    			
+    			<div id="tabs-4">
+            <div id="local" class="table">
+              <div class="profilesrow">
+                <div class="row">
+                  <div class="headers">Account</div>
+                  <div class="headers">Primary</div>
+                  <div class="headers">Options</div>
+                </div>
+              </div>
+              <hr />
+              <div class="row">
+			          <div class="cell">
+                  <input class="add_profile" type="submit" value="Add Another" />
+                </div>
+              </div>
+            </div>
+            <div id="addone" class="table">
+              <div>
+    			      <input id="acct_email" size="25" type="hidden" />
+    			    </div>
+              <div id='user'>
+                <div>
+                  <label for="email">Email</label>
+                  <br />
+                  <input id="email" size="45" type="text" value="" />
+                </div>
+                <br />
+                <div>
+                  <label for="token">API Token</label>
+                  <br />
+                  <input id="token" size="40" type="text" value="" />
+                </div>
+                <br />
+                <div>
+                  <label for="prim">Primary Account</label>
+                  <br />
+                  <input id="prim" name="prim" type="checkbox">
+                </div>
+                <br />
+                <div class="row">
+  			          <div class="cell">
+                    <input class="add" type="submit" value="Submit" />
+                    <input class="addcancel" type="submit" value="Cancel" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    		  
+    		  <div id="tabs-5">
+    			  <div class="table">
+    			    <div>
+                <input id="global" name="global" type="checkbox"> <label for="global">Global View</label>
+                <br /><br />
+                <span class="hint">Turn this on if you want to view all information for all accounts all the time, <br />
+                      leave it off if you only want to manage the current Primary Account.</span>
+              </div>
+    			    <hr />
+      			  <div class="row">
+			          <div class="cell">
+  			          <input class="settings" type="submit" value="Submit">
+  			        </div>
+  			      </div>
+    			  </div>
+    			</div>
+    		</div>
+      </div>
+      <div id="footer">
+      </div>
+    </div>
+  </body>
+</html>
